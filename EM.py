@@ -11,7 +11,7 @@ class EM():
 	def __init__(self,feature_data,features,N,K):
 
 		"""
-		feature_data: contains CEO data, each column besides company_id is feature
+		feature_data: contains observations indexed by a 'key' column, rest of columns are features
 		features: the list of features one wants to use in estimation
 		K: number of latent types to estimate
 		"""
@@ -56,7 +56,7 @@ class EM():
 	def feature_count_prob(self,f,i,k):
 
 		"""
-		For feature f, compute the log probability that ceo i with type k generates the observed counts.
+		For feature f, compute the log probability that document i with type k generates the observed counts.
 		Called during E step to compute posterior distribution over types.
 		"""
 
